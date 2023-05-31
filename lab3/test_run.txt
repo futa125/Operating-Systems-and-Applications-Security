@@ -1,0 +1,90 @@
+.EEEE........EE
+======================================================================
+ERROR: test_login_success_divide_by_zero (__main__.LoginSuccessTest.test_login_success_divide_by_zero)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/homebrew/Cellar/python@3.11/3.11.3/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1369, in patched
+    return func(*newargs, **newkeywargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/futa125/Personal/Repos/Operating-Systems-and-Applications-Security/lab3/test.py", line 103, in test_login_success_divide_by_zero
+    login_success()
+  File "/Users/futa125/Personal/Repos/Operating-Systems-and-Applications-Security/lab3/main.py", line 21, in login_success
+    print(ops_manager.perform_division())
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/futa125/Personal/Repos/Operating-Systems-and-Applications-Security/lab3/main.py", line 12, in perform_division
+    return self.a / self.b
+           ~~~~~~~^~~~~~~~
+ZeroDivisionError: float division by zero
+
+======================================================================
+ERROR: test_login_success_eval_divide_by_zero (__main__.LoginSuccessTest.test_login_success_eval_divide_by_zero)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/homebrew/Cellar/python@3.11/3.11.3/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1369, in patched
+    return func(*newargs, **newkeywargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/futa125/Personal/Repos/Operating-Systems-and-Applications-Security/lab3/test.py", line 110, in test_login_success_eval_divide_by_zero
+    login_success()
+  File "/Users/futa125/Personal/Repos/Operating-Systems-and-Applications-Security/lab3/main.py", line 24, in login_success
+    print("Result:", eval(expression))
+                     ^^^^^^^^^^^^^^^^
+  File "<string>", line 1, in <module>
+ZeroDivisionError: division by zero
+
+======================================================================
+ERROR: test_login_success_eval_invalid_expression (__main__.LoginSuccessTest.test_login_success_eval_invalid_expression)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/homebrew/Cellar/python@3.11/3.11.3/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1369, in patched
+    return func(*newargs, **newkeywargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/futa125/Personal/Repos/Operating-Systems-and-Applications-Security/lab3/test.py", line 117, in test_login_success_eval_invalid_expression
+    login_success()
+  File "/Users/futa125/Personal/Repos/Operating-Systems-and-Applications-Security/lab3/main.py", line 24, in login_success
+    print("Result:", eval(expression))
+                     ^^^^^^^^^^^^^^^^
+  File "<string>", line 1, in <module>
+NameError: name 'ABC' is not defined
+
+======================================================================
+ERROR: test_login_success_invalid_input (__main__.LoginSuccessTest.test_login_success_invalid_input)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/homebrew/Cellar/python@3.11/3.11.3/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1369, in patched
+    return func(*newargs, **newkeywargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/futa125/Personal/Repos/Operating-Systems-and-Applications-Security/lab3/test.py", line 96, in test_login_success_invalid_input
+    login_success()
+  File "/Users/futa125/Personal/Repos/Operating-Systems-and-Applications-Security/lab3/main.py", line 18, in login_success
+    a = float(input("A = "))
+        ^^^^^^^^^^^^^^^^^^^^
+ValueError: could not convert string to float: 'ABC'
+
+======================================================================
+ERROR: test_perform_division_with_strings (__main__.OperationsManagerTest.test_perform_division_with_strings)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/futa125/Personal/Repos/Operating-Systems-and-Applications-Security/lab3/test.py", line 49, in test_perform_division_with_strings
+    result = self.ops_manager.perform_division()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/futa125/Personal/Repos/Operating-Systems-and-Applications-Security/lab3/main.py", line 12, in perform_division
+    return self.a / self.b
+           ~~~~~~~^~~~~~~~
+TypeError: unsupported operand type(s) for /: 'str' and 'str'
+
+======================================================================
+ERROR: test_perform_division_with_zero (__main__.OperationsManagerTest.test_perform_division_with_zero)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/futa125/Personal/Repos/Operating-Systems-and-Applications-Security/lab3/test.py", line 33, in test_perform_division_with_zero
+    result = self.ops_manager.perform_division()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/futa125/Personal/Repos/Operating-Systems-and-Applications-Security/lab3/main.py", line 12, in perform_division
+    return self.a / self.b
+           ~~~~~~~^~~~~~~~
+ZeroDivisionError: division by zero
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.003s
+
+FAILED (errors=6)
